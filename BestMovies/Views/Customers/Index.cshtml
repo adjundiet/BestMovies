@@ -1,0 +1,30 @@
+﻿@model IEnumerable<BestMovies.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Customers</h2>
+@if (Model == null)
+{
+    <p>We don't have any customers yet.</p>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                Customer
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Name, "Details", "Customers", new {item.Id},null)
+                </td>
+            </tr>
+        }
+    </table>
+}
+
