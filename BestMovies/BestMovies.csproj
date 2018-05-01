@@ -154,8 +154,30 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805011056255_InitialCreate.cs" />
+    <Compile Include="Migrations\201805011056255_InitialCreate.Designer.cs">
+      <DependentUpon>201805011056255_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011125209_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201805011125209_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201805011125209_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011614503_AddBirthday.cs" />
+    <Compile Include="Migrations\201805011614503_AddBirthday.Designer.cs">
+      <DependentUpon>201805011614503_AddBirthday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011832120_ExtendMoviesModel.cs" />
+    <Compile Include="Migrations\201805011832120_ExtendMoviesModel.Designer.cs">
+      <DependentUpon>201805011832120_ExtendMoviesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011833145_PopulateGenre.cs" />
+    <Compile Include="Migrations\201805011833145_PopulateGenre.Designer.cs">
+      <DependentUpon>201805011833145_PopulateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BestMoviesContext.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -215,6 +237,23 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805011056255_InitialCreate.resx">
+      <DependentUpon>201805011056255_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011125209_PopulateMembershipTypes.resx">
+      <DependentUpon>201805011125209_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011614503_AddBirthday.resx">
+      <DependentUpon>201805011614503_AddBirthday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011832120_ExtendMoviesModel.resx">
+      <DependentUpon>201805011832120_ExtendMoviesModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011833145_PopulateGenre.resx">
+      <DependentUpon>201805011833145_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -5,7 +5,7 @@
 }
 
 <h2>Movies</h2>
-@if (Model == null)
+@if (Model == null || !Model.Any())
 {
     <p>We don't have any movies yet.</p>
 }
@@ -16,14 +16,19 @@ else
         <th>
             Movie
         </th>
-        <th></th>
+        <th>
+            Genre
+        </th>
     </tr>
     @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.ActionLink(item.Name, "Details", "Movies", new {item.Id},null)
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.ActionLink(item.Name, "Details", "Movies", new { item.Id }, null)
+        </td>
+        <td>
+           @item.Genre.Name
+        </td>
+    </tr>
     }
 </table>
 }

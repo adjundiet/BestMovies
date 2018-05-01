@@ -1,4 +1,5 @@
 ﻿@model BestMovies.Models.Customer
+@using System
 
 @{
     ViewBag.Title = "Details";
@@ -6,4 +7,11 @@
 <div>
     <hr>
     <h3>@Html.DisplayFor(model => model.Name)</h3>
+    <ul>
+        @if (Model.BirthDate != null)
+        {
+            <li>Birth Date: @(((DateTime)Model.BirthDate).ToShortDateString())</li>
+        }
+        <li>Membership Type: @Model.MembershipType.Name</li>
+    </ul>
 </div>
