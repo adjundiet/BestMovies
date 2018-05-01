@@ -5,12 +5,11 @@ using System.Web;
 
 namespace BestMovies.Models
 {
-    public class Customer
+    public class MembershipType
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool IsSubscribedToNewsletter { get; set; }
-        public MembershipType MembershipType { get; set; }
-        public int MembershipTypeId { get; set; }
+        public decimal Fee { get; set; }
+        public int Discount { get; set; }
     }
 }
